@@ -5,28 +5,46 @@ def lambda_handler(event, context):
     
   #CRUD (pour Create, Read, Update, Delete) 
   if HTTPMethod == "POST" or HTTPMethod == "PUT":
-    body = json.loads(event['body'])
+    try:
+      body = json.loads(event['body'])
+    except:
+      return {
+        'statusCode': 400,
+        'body': "Bad request: the body must be in valid JSON format."
+      }
     return {
       'statusCode': 201,
-      'created': json.dumps(body)
+      'body': "{ 'Created': " + json.dumps(body) + "}"
     }
 
   if HTTPMethod == "GET":
     return {
       'statusCode': 200,
-      'Retrieved': "Hello, world."
+      'body': "Hello, world."
     }
 
   if HTTPMethod == "PATCH":
-    body = json.loads(event['body'])
+    try:
+      body = json.loads(event['body'])
+    except:
+      return {
+        'statusCode': 400,
+        'body': "Bad request: the body must be in valid JSON format."
+      }
     return {
       'statusCode': 202,
-      'patched': json.dumps(body)
+      'body': "{ 'Modified': " + json.dumps(body) + "}"
     }
   
   if HTTPMethod == "DELETE":
-    body = json.loads(event['body'])
+    try:
+      body = json.loads(event['body'])
+    except:
+      return {
+        'statusCode': 400,
+        'body': "Bad request: the body must be in valid JSON format."
+      }
     return {
       'statusCode': 204,
-      'patched': json.dumps(body)
+      'body': "{ 'Deleted': " + json.dumps(body) + "}"
     }
