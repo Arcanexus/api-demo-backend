@@ -15,11 +15,3 @@ It manages the following operations :
 |PATCH   | Yes (json)  | 202  | ```{ 'Modified': <payload> "} ```  |
 |DELETE   | Yes (json)  | 204  | ```{ 'Deleted': <payload> "} ```  |
 
-## Frontend webapp
-The frontend is a Flask webapp.
-
-To run the webapp :
-1. (Optional) Create a Venv
-2. Install prerequisites from **requirements.txt**
-3. Run ```python app.py```
-4. Browse [localhost:5000](http://localhost:5000) (change the URL depending on where you deployed the webapp)
