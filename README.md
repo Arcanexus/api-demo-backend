@@ -1,4 +1,5 @@
 # lambda-api-demo
+[![deploy to lambda](https://github.com/Arcanexus/api-demo-backend/actions/workflows/main.yml/badge.svg)](https://github.com/Arcanexus/api-demo-backend/actions/workflows/main.yml)
 
 ## Summary
 A simple set of Python scripts simulating a CRUD based API.

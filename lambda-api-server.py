@@ -14,13 +14,13 @@ def lambda_handler(event, context):
       }
     return {
       'statusCode': 201,
-      'body': "{ 'Created': " + json.dumps(body) + "}"
+      'body': "{ \"Result\": \"Created\", \"Values\": " + json.dumps(body) + "}"
     }
 
   if HTTPMethod == "GET":
     return {
       'statusCode': 200,
-      'body': "Hello, world."
+      'body': "{\"Hello\":\"World\"}"
     }
 
   if HTTPMethod == "PATCH":
@@ -33,7 +33,7 @@ def lambda_handler(event, context):
       }
     return {
       'statusCode': 202,
-      'body': "{ 'Modified': " + json.dumps(body) + "}"
+      'body': "{ \"Modified\": " + json.dumps(body) + "}"
     }
   
   if HTTPMethod == "DELETE":
@@ -46,5 +46,5 @@ def lambda_handler(event, context):
       }
     return {
       'statusCode': 204,
-      'body': "{ 'Deleted': " + json.dumps(body) + "}"
+      'body': "{ \"Deleted\": " + json.dumps(body) + "}"
     }
