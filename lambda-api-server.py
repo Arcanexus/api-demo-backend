@@ -33,7 +33,7 @@ def lambda_handler(event, context):
       }
     return {
       'statusCode': 202,
-      'body': "{ \"Modified\": " + json.dumps(body) + "}"
+      'body': "{ \"Result\": \"Modified\", \"Values\": " + json.dumps(body) + "}"
     }
   
   if HTTPMethod == "DELETE":
@@ -46,5 +46,5 @@ def lambda_handler(event, context):
       }
     return {
       'statusCode': 204,
-      'body': "{ \"Deleted\": " + json.dumps(body) + "}"
+      'body': "{ \"Result\": \"Deleted\", \"Values\": " + json.dumps(body) + "}"
     }
