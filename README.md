@@ -11,8 +11,8 @@ It manages the following operations :
 | HTTP Method | Request Payload  | HTTP Return code  | Response |
 |---|---|---|---|
 |GET   | No  | 200   | Hello, world.  |
-|POST   | Yes (json)  | 201  | ```{ 'Created': <payload> "} ```  |
-|PUT   | Yes (json)  | 201  | ```{ 'Created': <payload> "} ```  |
-|PATCH   | Yes (json)  | 202  | ```{ 'Modified': <payload> "} ```  |
-|DELETE   | Yes (json)  | 204  | ```{ 'Deleted': <payload> "} ```  |
+|POST   | Yes (json)  | 201  | ```{ "Result": "Created", "Values": <payload>} ```  |
+|PUT   | Yes (json)  | 201  | ```{ "Result": "Created", "Values": <payload>} ```  |
+|PATCH   | Yes (json)  | 202  | ```{ "Result": "Modified", "Values": <payload>} ```  |
+|DELETE   | Yes (json)  | 204  |  |
 
