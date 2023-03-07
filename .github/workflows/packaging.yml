@@ -19,5 +19,5 @@ jobs:
 
     - uses: actions/upload-artifact@v3
       with:
-        name: api-demo-backend
+        name: lambda-api-server
         path: lambda-api-server.py
