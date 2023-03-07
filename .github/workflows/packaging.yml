@@ -1,0 +1,23 @@
+name: Create a zip package
+
+on: [push]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 5
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Archive Release
+      uses: thedoctor0/zip-release@0.7.1
+      with:
+        type: 'zip'
+        filename: 'api-demo-backend.zip'
+        exclusions: '*.git* /*node_modules/* .editorconfig LICENCE README.md'
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: api-demo-backend
+        path: api-demo-backend.zip
