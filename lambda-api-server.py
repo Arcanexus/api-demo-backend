@@ -20,7 +20,7 @@ def lambda_handler(event, context):
   if HTTPMethod == "GET":
     return {
       'statusCode': 200,
-      'body': "{\"Hello\":\"World\"}"
+      'body': "{\"Hello\":\"World\", \"Function Name\": " + context.function_name + "}"
     }
 
   if HTTPMethod == "PATCH":
