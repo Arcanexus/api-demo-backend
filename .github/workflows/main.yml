@@ -20,7 +20,7 @@ jobs:
       - name: checkout source code
         uses: actions/checkout@v1
       - name: default deploy
-        uses: appleboy/lambda-action@390dab2546e6c97ca3b94fc5f3863d0e15bec0ee # old : appleboy/lambda-action@master
+        uses: appleboy/lambda-action@v0.1.9 # old : appleboy/lambda-action@master
         with:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
